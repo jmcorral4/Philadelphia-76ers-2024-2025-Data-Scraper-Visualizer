@@ -13,14 +13,15 @@ Use multiple third-party libraries
 Parse, clean, and visualize complex datasets
 Debug and adapt my code to changing data formats
 # How This Project Differs from My Previous Scripts
-Aspect	Simple Scripts (intro_script.py, calculator_script.py)	NBA Data Project (this repo)
-Input	User/console input	Live web data (HTML tables)
-Data Handling	Basic variables, lists	DataFrames, regex, data cleaning
-Dependencies	None or standard library	requests, bs4, pandas, lxml, matplotlib, seaborn
-Debugging	Minimal, easy to trace	Extensive, with print/debugging
-Output	Console text	Console + visual charts
-Error Handling	Basic	Must handle missing/changed data
-Documentation	Minimal	Essential for reproducibility <br>
+| Aspect |	Simple Scripts (intro_script.py, calculator_script.py) |	NBA Data Project (this repo) |
+| --- | --- | --- |
+| Input	| User/console input	| Live web data (HTML tables) |
+| Data Handling	| Basic variables, lists	| DataFrames, regex, data cleaning |
+| Dependencies	| None or standard library	| requests, bs4, pandas, lxml, matplotlib, seaborn |
+| Debugging	| Minimal, easy to trace	| Extensive, with print/debugging |
+| Output	| Console text	| Console + visual charts |
+| Error Handling	| Basic	| Must handle missing/changed data |
+| Documentation	| Minimal	| Essential for reproducibility | <br>
 # What I Tried To Do
 1. <ins>Scrape the Roster Table<ins>
   - Goal: Automatically fetch and display the current 76ers roster.
