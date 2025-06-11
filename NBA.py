@@ -98,30 +98,17 @@ if depth_response.status_code == 200:
         print("\nPhiladelphia 76ers 2024-25 Depth Chart (Player Stats):")
         last_player = None
         for cell in depth_df.iloc[:, 0]:
-            for line in str(cell).split('\n'):
-                line = line.strip()
-                print("LINE:", repr(line))
-                if not line:
-                    continue
-                # If the line is just a player name, save it
-                if re.match(r"^[A-Za-z .'\-\t]+$", line):
-                    last_player = line.split('\t')[-1].strip()
-                # If the line starts with digits and ends with WS, parse stats
-                elif re.match(r"^\d+ MP, ", line) and last_player:
-                    # Example: 1960 MP, 26.3 Pts/3.3 Reb/6.1 Ast, 3.8 WS
-                    match = re.match(
-                        r"^(\d+) MP, ([\d\.\-]+) Pts/([\d\.\-]+) Reb/([\d\.\-]+) Ast, ([\d\.\-]+) WS",
-                        line
-                    )
-                    if match:
-                        mp_val, pts_val, reb_val, ast_val, ws_val = match.groups()
-                        players.append(last_player.strip())
-                        mp.append(float(mp_val))
-                        pts.append(float(pts_val))
-                        reb.append(float(reb_val))
-                        ast.append(float(ast_val))
-                        ws.append(float(ws_val))
-                        print(f"{last_player:20} | {mp_val:>4} MP | {pts_val:>5} PPG | {reb_val:>5} RPG | {ast_val:>5} APG | {ws_val:>5} WS")
+            pattern = r"([A-Za-z .'\-]+)\s+(\d+) MP, ([\d\.\-]+) Pts/([\d\.\-]+) Reb/([\d\.\-]+) Ast, ([\d\.\-]+) WS"
+            matches = re.findall(pattern, str(cell))
+            for match in matches:
+                player, mp_val, pts_val, reb_val, ast_val, ws_val = match
+                players.append(player.strip())
+                mp.append(float(mp_val))
+                pts.append(float(pts_val))
+                reb.append(float(reb_val))
+                ast.append(float(ast_val))
+                ws.append(float(ws_val))
+                print(f"{player:20} | {mp_val:>4} MP | {pts_val:>5} PPG | {reb_val:>5} RPG | {ast_val:>5} APG | {ws_val:>5} WS")
         print("Players:", players)
         print("Points:", pts)
         print("Rebounds:", reb)
