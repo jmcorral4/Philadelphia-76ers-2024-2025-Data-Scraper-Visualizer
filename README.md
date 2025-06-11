@@ -53,11 +53,10 @@ Debug and adapt my code to changing data formats
       - The importance of printing every line being parsed to debug regex issues.
       - How to build a DataFrame for plotting, and dynamically adjust chart size for readability.
       - How grouping by position could make charts more readable (future improvement). <br>
-  ![image](https://github.com/user-attachments/assets/a9ade06d-00ba-410a-89b5-4f3f2329b4ed) <br>
-  ![image](https://github.com/user-attachments/assets/117763d1-c523-48b4-bfe2-cc243ab394c7) <br>
-  ![image](https://github.com/user-attachments/assets/d3a0ec13-995f-4c9e-828c-334e418378a7) <br>
-  ![image](https://github.com/user-attachments/assets/2405043d-885d-41cf-8b14-770dcd032995) <br>
-
+  ![image](https://github.com/user-attachments/assets/d649f73e-c8cc-4461-9c73-14845d18e363) <br>
+  ![image](https://github.com/user-attachments/assets/83c540f7-6801-465c-bdd6-d3f2adeb3dc2) <br>
+  ![image](https://github.com/user-attachments/assets/32bc9add-9ec4-4357-9993-786372abc663) <br>
+  ![image](https://github.com/user-attachments/assets/486b2e9f-0c75-447e-abed-f6b895edd667) <br>
 
 # What’s Required to Succeed in a Project Like This
 - Patience and persistence: Real-world data is messy and web pages change.
