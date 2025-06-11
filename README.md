@@ -53,6 +53,12 @@ Debug and adapt my code to changing data formats
       - The importance of printing every line being parsed to debug regex issues.
       - How to build a DataFrame for plotting, and dynamically adjust chart size for readability.
       - How grouping by position could make charts more readable (future improvement). <br>
+  ![image](https://github.com/user-attachments/assets/a9ade06d-00ba-410a-89b5-4f3f2329b4ed) <br>
+  ![image](https://github.com/user-attachments/assets/117763d1-c523-48b4-bfe2-cc243ab394c7) <br>
+  ![image](https://github.com/user-attachments/assets/d3a0ec13-995f-4c9e-828c-334e418378a7) <br>
+  ![image](https://github.com/user-attachments/assets/2405043d-885d-41cf-8b14-770dcd032995) <br>
+
+
 # What’s Required to Succeed in a Project Like This
 - Patience and persistence: Real-world data is messy and web pages change.
 - Debugging skills: Print statements and DataFrame inspection are essential.
@@ -60,6 +66,7 @@ Debug and adapt my code to changing data formats
 - Understanding of libraries: Knowing what tools are available and how to use them together.
 - Visualization: Making results clear and meaningful with charts. <br>
 # What’s Next
+- I need to be able to parse more than 4 players in one chart.
 - Improve parsing to group players by position for clearer charts.
 - Generalize the script for other teams or seasons.
 - Add error handling and logging for robustness. <br>
