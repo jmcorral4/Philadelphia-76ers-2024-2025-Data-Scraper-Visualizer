@@ -98,8 +98,12 @@ if depth_response.status_code == 200:
         print("\nPhiladelphia 76ers 2024-25 Depth Chart (Player Stats):")
         last_player = None
         for cell in depth_df.iloc[:, 0]:
-            pattern = r"([A-Za-z .'\-]+)\s+(\d+) MP, ([\d\.\-]+) Pts/([\d\.\-]+) Reb/([\d\.\-]+) Ast, ([\d\.\-]+) WS"
-            matches = re.findall(pattern, str(cell))
+            # Paste your player stats here (copy from the website and edit as needed)
+            test_string = """
+            Tyrese Maxey 1960 MP, 26.3 Pts/3.3 Reb/6.1 Ast, 3.8 WS Kyle Lowry 659 MP, 3.9 Pts/1.9 Reb/2.7 Ast, 1.0 WS Jeff Dowtin Jr. 621 MP, 7.0 Pts/1.5 Reb/1.9 Ast, 1.3 WS Reggie Jackson 384 MP, 4.4 Pts/1.4 Reb/1.5 Ast, 0.1 WS Quentin Grimes 943 MP, 21.9 Pts/5.2 Reb/4.5 Ast, 1.6 WS Eric Gordon 768 MP, 6.8 Pts/1.2 Reb/1.7 Ast, 0.9 WS Jared Butler 682 MP, 11.5 Pts/2.5 Reb/4.9 Ast, 0.8 WS Jared McCain 592 MP, 15.3 Pts/2.4 Reb/2.6 Ast, 0.7 WS Lonnie Walker IV 477 MP, 12.4 Pts/3.2 Reb/2.5 Ast, 0.3 WS Jalen Hood-Schifino 301 MP, 7.8 Pts/2.0 Reb/2.8 Ast, -0.1 WS Lester Quinones 17 MP, 2.3 Pts/1.0 Reb/0.3 Ast, -0.1 WS Kelly Oubre Jr. 2078 MP, 15.1 Pts/6.1 Reb/1.8 Ast, 2.6 WS Ricky Council IV 1250 MP, 7.3 Pts/2.9 Reb/1.3 Ast, 0.6 WS Justin Edwards 1155 MP, 10.1 Pts/3.4 Reb/1.6 Ast, 0.9 WS Caleb Martin 943 MP, 9.1 Pts/4.4 Reb/2.2 Ast, 0.6 WS Marcus Bagley 253 MP, 6.7 Pts/7.0 Reb/1.0 Ast, 0.2 WS Oshae Brissett 142 MP, 8.7 Pts/3.7 Reb/0.7 Ast, 0.1 WS Paul George 1334 MP, 16.2 Pts/5.3 Reb/4.3 Ast, 1.0 WS KJ Martin 480 MP, 6.4 Pts/3.0 Reb/0.8 Ast, 1.1 WS Alex Reese 214 MP, 5.3 Pts/3.3 Reb/0.3 Ast, 0.5 WS Chuma Okeke 171 MP, 6.9 Pts/6.1 Reb/1.9 Ast, 0.6 WS Phillip Wheeler 44 MP, 1.6 Pts/1.6 Reb/0.4 Ast, -0.3 WS David Roddy 29 MP, 6.0 Pts/3.0 Reb/1.0 Ast, 0.0 WS Isaiah Mobley 17 MP, 6.0 Pts/4.0 Reb/5.0 Ast, 0.0 WS Guerschon Yabusele 1895 MP, 11.0 Pts/5.6 Reb/2.1 Ast, 3.9 WS Adem Bona 905 MP, 5.8 Pts/4.2 Reb/0.5 Ast, 2.3 WS Andre Drummond 751 MP, 7.3 Pts/7.8 Reb/0.9 Ast, 1.2 WS Joel Embiid 574 MP, 23.8 Pts/8.2 Reb/4.5 Ast, 1.4 WS Colin Castleton 98 MP, 6.0 Pts/7.4 Reb/2.0 Ast, 0.3 WS Pete Nance 68 MP, 2.1 Pts/1.4 Reb/0.4 Ast, 0.0 WS
+            """
+            pattern = r"([A-Za-z .'\-]+?)\s+(\d+) MP, ([\d\.\-]+) Pts/([\d\.\-]+) Reb/([\d\.\-]+) Ast, ([\d\.\-]+) WS"
+            matches = re.findall(pattern, test_string)
             for match in matches:
                 player, mp_val, pts_val, reb_val, ast_val, ws_val = match
                 players.append(player.strip())
@@ -109,12 +113,12 @@ if depth_response.status_code == 200:
                 ast.append(float(ast_val))
                 ws.append(float(ws_val))
                 print(f"{player:20} | {mp_val:>4} MP | {pts_val:>5} PPG | {reb_val:>5} RPG | {ast_val:>5} APG | {ws_val:>5} WS")
-        print("Players:", players)
-        print("Points:", pts)
-        print("Rebounds:", reb)
-        print("Assists:", ast)
-        print("Win Shares:", ws)
-        print("Lengths:", len(players), len(pts), len(reb), len(ast), len(ws))
+            print("Players:", players)
+            print("Points:", pts)
+            print("Rebounds:", reb)
+            print("Assists:", ast)
+            print("Win Shares:", ws)
+            print("Lengths:", len(players), len(pts), len(reb), len(ast), len(ws))
         
         # --- Use DataFrame for plotting ---
         df = pd.DataFrame({
