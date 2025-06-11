@@ -35,13 +35,16 @@ Debug and adapt my code to changing data formats
   - What I learned:
       - How to use requests and BeautifulSoup to fetch and parse HTML.
       - How to use pandas.read_html to extract tables.
-      - The importance of checking for missing or changed tables.
+      - The importance of checking for missing or changed tables.<br>
+![image](https://github.com/user-attachments/assets/5d238d2f-b569-4de5-80c7-a2659ceeab2b)
 2. <ins>Scrape and Visualize Game Results<ins>
   - Goal: Analyze and visualize the team’s win/loss record and home/away performance.
   - What I learned:
       - How to clean up web-scraped tables (removing repeated headers, finding the right columns).
       - How to use matplotlib and seaborn for pie and bar charts.
-      - How to debug by printing intermediate results and confirming calculations.
+      - How to debug by printing intermediate results and confirming calculations.<br>
+ ![image](https://github.com/user-attachments/assets/609fa67d-b47c-49cb-b5c3-b5f9ac1977d7)
+     
 3. <ins>Scrape and Visualize Player Stats from the Depth Chart<ins>
   - Goal: Extract and visualize individual player stats (points, rebounds, assists, win shares).
   - What I learned:
